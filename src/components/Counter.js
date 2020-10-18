@@ -2,23 +2,32 @@ import React from "react";
 import countapi from "countapi-js";
 
 export default class Counter extends React.Component {
-  state = {
-    isLoading: true,
-    count: 0
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      isLoading: true,
+      count: 0
+    };
+    this.handleViews = this.handleViews.bind(this);
   }
 
-  async componentDidMount() {
+
+  handleViews(e) {
     countapi.event().then((result) => {
-      console.log(result)
+      this.setState({isLoading: false, count: result.value})
     });
   }
+
 
   render() {
     return (
       <div>
         <p>This page has been viewed</p>
-        <h1>X</h1>
+        <h1>{this.state.count}</h1>
         <p>times</p>
+        <br />
+        <button onClick={this.handleViews}>Hit me up</button>
       </div>
     )
   }
