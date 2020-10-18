@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import FetchUser from "./components/FetchUser";
-import Counter from "./components/Counter";
+import Counter from "./components/Counter/Counter";
 
 class App extends Component {
   render() {

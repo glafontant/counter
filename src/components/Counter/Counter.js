@@ -1,5 +1,6 @@
 import React from "react";
 import countapi from "countapi-js";
+import './Counter.css';
 
 export default class Counter extends React.Component {
 
@@ -27,7 +28,7 @@ export default class Counter extends React.Component {
         <h1>{this.state.count}</h1>
         <p>times</p>
         <br />
-        <button onClick={this.handleViews}>Hit me up</button>
+        <button onClick={this.handleViews} className="fetch-button">Hit me up</button>
       </div>
     )
   }
