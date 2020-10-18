@@ -36,3 +36,5 @@ One thing I'd like to do is add a couple more features.
 3) Perhaps a feature where the page displays the current count over the course of a day, 7 day period, etc. Perhaps a user is interested in more granularity with the amount of views.
 
 4) Finally, how to ensure unique views. Perhaps we only want to count the amount of unique viewers rather than total impresssions. Perhaps this may be of value to the end user.
+
+5) Error handling and monitoring. Given the use case there is not much error handling but this is something we would want to consider. For instance if the API times out or is unavailable. Also we would want to log whatever errors occur for debugging purposes.
